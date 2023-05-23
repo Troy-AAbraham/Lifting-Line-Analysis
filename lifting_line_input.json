@@ -1,0 +1,37 @@
+{
+    "wing" : {
+        "planform" : {
+            "type" : "tapered",
+            "type_options" : [["elliptic: (requires aspect_ratio)"], ["tapered: (requires aspect_ratio and taper_ratio)"]],
+            "aspect_ratio" : 8.0,
+            "taper_ratio" : 0.5
+        },
+        "airfoil_lift_slope" : 6.283185307179590,
+        "nodes_per_semispan" : 50,
+        "washout" : {
+            "distribution" : "linear",
+            "distribution_options" : [["none: no twist"], ["linear: linear twist distribution"], ["optimum: optimum twist distribution"]],
+            "magnitude[deg]" : 5.0,
+            "magnitude_options" : [["value: real number in degrees"], ["optimum: requires CL_design"]],
+            "CL_design" : 0.8
+        },
+        "aileron" : {
+            "begin[z/b]" : 0.22,
+            "end[z/b]" : 0.45,
+            "begin[cf/c]" : 0.18,
+            "end[cf/c]" : 0.18,
+            "hinge_efficiency" : 0.85
+        }
+    },
+    "condition" : {
+        "alpha_root[deg]" : 5.0,
+        "aileron_deflection[deg]" : 5.0,
+        "pbar" : "steady",
+        "pbar_notes" : "value or ’steady’"
+    },
+    "view" : {
+        "planform" : true,
+        "washout_distribution" : true,
+        "aileron_distribution" : true
+    }
+}
